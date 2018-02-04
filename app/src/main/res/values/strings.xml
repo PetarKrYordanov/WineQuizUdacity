@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Wine Quiz</string>
+    <string name="tittle_question_one">Question 1</string>
+    <string name="question_one">What si the minimum length of maturation required for vintage Champagne?</string>
+    <string name="question_one_hint">Answer in months</string>
+    <string name="tittle_question_two">Question 2</string>
+    <string name="tittle_question_three">Question 3</string>
+    <string name="tittle_question_four">Question 4</string>
+    <string name="tittle_question_five">Question 5</string>
+    <string name="tittle_question_six">Question 6</string>
+    <string name="question_two">Which of the following are characteristics of young Hunter Valley Semillon?</string>
+    <string name="quest_two_opt_one">High acid</string>
+    <string name="quest_two_opt_two">Low alcohol</string>
+    <string name="quest_two_opt_three">Pronounced aromas of vanilla</string>
+    <string name="quest_two_answer">ab</string>
+    <string name="question_three">Which one of the following grape varieties is not permitted for Alsace Grand Gru?</string>
+    <string name="quest_three_opt_one">Pinot Blanc</string>
+    <string name="quest_three_opt_two">Muscat</string>
+    <string name="quest_three_opt_three">Riesling</string>
+    <string name="question_four">Which region in New Zealand has established a reputation for Premium Pinot Noir?</string>
+    <string name="answer_question_four">Martinborough</string>
+    <string name="question_five">Which of the following is the standard method used to control phylloxera?</string>
+    <string name="quest_five_opt_one">Insecticides</string>
+    <string name="quest_five_opt_two">Conopy management</string>
+    <string name="quest_five_opt_three">Rootstocks</string>
+    <string name="question_six">Which of the following are important natural facts in Mendoza?</string>
+    <string name="quest_six_opt_one">Ocean breezes</string>
+    <string name="quest_six_opt_two">Hail</string>
+    <string name="quest_six_opt_three">Altitude</string>
+    <string name="hit_question_four">Write correct region</string>
+    <string name="submit">Submit</string>
+</resources>
