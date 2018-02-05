@@ -1,4 +1,4 @@
-package com.yordanov.gamesquiz;
+package com.yordanov.winequiz;
 
 import org.junit.Test;
 

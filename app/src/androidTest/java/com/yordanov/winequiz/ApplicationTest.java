@@ -1,4 +1,4 @@
-package com.yordanov.gamesquiz;
+package com.yordanov.winequiz;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
