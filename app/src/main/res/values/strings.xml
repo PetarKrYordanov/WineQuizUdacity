@@ -29,4 +29,12 @@
     <string name="quest_six_opt_three">Altitude</string>
     <string name="hit_question_four">Write correct region</string>
     <string name="submit">Submit</string>
+    <string name="answer_code_question_one">36</string>
+    <string name="answer_code_question_two">12</string>
+    <string name="answer_code_question_three">2</string>
+    <string name="answer_code_question_four">martinborough</string>
+    <string name="answer_code_question_five">3</string>
+    <string name="answer_code_question_six">23</string>
+
+
 </resources>

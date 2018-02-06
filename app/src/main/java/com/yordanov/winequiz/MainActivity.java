@@ -19,17 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button submit;
     int correctAnswers = 0;
-    String answerQuestOne = "36";
-    String answerQuestTwo = "12";
-    String answerQuestThree = "2";
-    String answerQuestFour = "martinborough";
-    String answerQuestFive = "3";
-    String answerQuestSix = "23";
+    // creating on click listener on submit button
     final View.OnClickListener submitButtonOnClickListener = new View.OnClickListener() {
         public void onClick(final View v) {
             checkAllQuestions();
-            Toasty.normal(MainActivity.this,
-                    "Correct Answers: " + correctAnswers + "/6", R.drawable.ic_icon).show();
+            Toasty.normal(MainActivity.this, "Correct Answers: " + correctAnswers + "/6").show();
 
             resetCounterCorrectAnswers();
         }
@@ -40,37 +34,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CardView cardView = findViewById(R.id.card_view);
-//cardView.setBackground(R.drawable.background_crop);
         submit = findViewById(R.id.submitButton);
         submit.setOnClickListener(submitButtonOnClickListener);
     }
 
+    // method for checking all questions
     private void checkAllQuestions() {
         String userInputQuestionOne = getUserInputAnswer((EditText)
                 findViewById(R.id.question_one_answer));
-        checkOpenQuestion(answerQuestOne, userInputQuestionOne);
+        checkOpenQuestion(getString(R.string.answer_code_question_one), userInputQuestionOne);
 
         String userInputQuestionFour = getUserInputAnswer((EditText) findViewById(R.id.answer_input_question_four));
-        checkOpenQuestion(answerQuestFour, userInputQuestionFour);
+        checkOpenQuestion(getString(R.string.answer_code_question_four), userInputQuestionFour);
 
         String userAnswerQuestionTwo = checkUserAnswer((CheckBox) findViewById(R.id.chk_one_quest_two),
                 (CheckBox) findViewById(R.id.chk_two_quest_two),
                 (CheckBox) findViewById(R.id.chk_three_quest_two));
-        checkAnswer(answerQuestTwo, userAnswerQuestionTwo);
+        checkAnswer(getString(R.string.answer_code_question_two), userAnswerQuestionTwo);
 
         String userAnswerQuestionSix = checkUserAnswer((CheckBox) findViewById(R.id.chk_one_quest_six),
                 (CheckBox) findViewById(R.id.chk_two_quest_six),
                 (CheckBox) findViewById(R.id.chk_three_quest_six));
-        checkAnswer(answerQuestSix, userAnswerQuestionSix);
+        checkAnswer(getString(R.string.answer_code_question_six), userAnswerQuestionSix);
 
-        checkMultipleChoiceQuestion(answerQuestThree, (RadioButton) findViewById(R.id.radio_one_quest_three),
+        checkMultipleChoiceQuestion(getString(R.string.answer_code_question_three), (RadioButton) findViewById(R.id.radio_one_quest_three),
                 (RadioButton) findViewById(R.id.radio_two_quest_three),
                 (RadioButton) findViewById(R.id.radio_three_quest_three));
-        checkMultipleChoiceQuestion(answerQuestFive, (RadioButton) findViewById(R.id.radio_one_quest_five),
+        checkMultipleChoiceQuestion(getString(R.string.answer_code_question_five), (RadioButton) findViewById(R.id.radio_one_quest_five),
                 (RadioButton) findViewById(R.id.radio_two_quest_five),
                 (RadioButton) findViewById(R.id.radio_three_quest_five));
     }
 
+    // check user input question using user input and correct an
     private void checkOpenQuestion(String correctAnswer, String answerUser) {
         if (answerUser.trim().equalsIgnoreCase(correctAnswer)) {
             correctAnswers += 1;
@@ -81,10 +76,12 @@ public class MainActivity extends AppCompatActivity {
         correctAnswers = 0;
     }
 
+    //reading user input for open question
     private String getUserInputAnswer(EditText editText) {
         return editText.getText().toString();
     }
 
+    // checking users checkbox and creating user answer code from them
     private String checkUserAnswer(CheckBox checkBoxOne, CheckBox checkBoxTwo, CheckBox checkBoxThree) {
         String answerCode = "";
         if (checkBoxOne.isChecked()) {
@@ -105,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //  checking multiple choice question by answer code and reading radio buttons
     private void checkMultipleChoiceQuestion(String answer, RadioButton radioButtonOne,
                                              RadioButton radioButtonTwo, RadioButton radioButtonThree) {
         String answerCode;
