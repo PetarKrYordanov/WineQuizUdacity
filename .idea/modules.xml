@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WineQuiz.iml" filepath="$PROJECT_DIR$/WineQuiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WineQuizUdacity.iml" filepath="$PROJECT_DIR$/WineQuizUdacity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
